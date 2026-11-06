@@ -1,0 +1,53 @@
+{
+	"geode": "5.9.0",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "mynor.auto-decorator",
+	"name": "Auto Decorator",
+	"version": "v1.0.0",
+	"developer": "Mynor",
+	"description": "Adds a Deco button to the editor that decorates your level automatically.",
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.3"
+	},
+	"settings": {
+		"density": {
+			"type": "int",
+			"name": "Decoration density (%)",
+			"description": "Chance that an open spot next to a block gets a decoration.",
+			"default": 70,
+			"min": 0,
+			"max": 100
+		},
+		"top-ids": {
+			"type": "string",
+			"name": "Top decoration object IDs",
+			"description": "Comma-separated object IDs placed on top of blocks. One is picked at random for each spot.",
+			"default": "18,19,20,21"
+		},
+		"hanging": {
+			"type": "bool",
+			"name": "Hanging decorations",
+			"description": "Also place upside-down decorations under floating blocks.",
+			"default": true
+		},
+		"hanging-ids": {
+			"type": "string",
+			"name": "Hanging decoration object IDs",
+			"description": "Comma-separated object IDs placed (flipped) under floating blocks.",
+			"default": "18,19,20,21"
+		},
+		"deco-group": {
+			"type": "int",
+			"name": "Decoration group ID",
+			"description": "Every auto decoration gets this group, so Remove can find and delete them.",
+			"default": 9999,
+			"min": 1,
+			"max": 9999
+		}
+	}
+}
